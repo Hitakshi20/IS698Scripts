@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-is698-s3-bucket"  
+  bucket = "<your-unique-bucket-name>"  
 }
 
 resource "aws_s3_bucket_versioning" "versioning_example" {
