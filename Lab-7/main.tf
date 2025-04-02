@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "terraform-state-is698lab7"
+    bucket         = "<terraform-state-<your-unique-id>"
     key            = "terraform/state.tfstate"
     region         = "us-east-1"
     encrypt        = true
@@ -8,9 +8,9 @@ terraform {
   }
 }
 resource "aws_instance" "example" {
-  ami           = "ami-00a929b66ed6e0de6"
+  ami           = "<your-ami-id>"
   instance_type = "t2.micro"
-  subnet_id     = "subnet-026681df36b76c12b"
+  subnet_id     = "subnet-xxxxxxxxxxxxx"
   tags = {
     Name = "Terraform-Test-Instance"
   }
